@@ -94,3 +94,18 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+function openTPLLinks(event) {
+  event.preventDefault();
+
+  window.open(
+    "https://drive.mathworks.com/sharing/4de7cc67-57d8-442c-ac6d-07fd4c9f1639/live_script_dimen.mlx",
+    "_blank"
+  );
+
+
+  window.open(
+    "assets/papers/beng227_tpl_report.pdf",
+    "_blank"
+  );
+}
