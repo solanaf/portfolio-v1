@@ -1,9 +1,4 @@
 body {
-  background: #303030;
-  color: white;
-  font-family: Poppins, sans-serif;
-
-  margin: 0;
   padding: 2rem;
 }
 
@@ -23,16 +18,15 @@ h1 {
 }
 
 .project-card {
-
-  background: #181818;
-
-  border-radius: 24px;
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  box-shadow: var(--shadow-1);
 
   padding: 2rem;
 
   display: flex;
   gap: 2rem;
-
   align-items: center;
 }
 
@@ -64,54 +58,71 @@ model-viewer {
 }
 
 .project-description h2 {
-
+  color: var(--vegas-gold);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
+
 .project-description p {
-
-  color: #cfcfcf;
-
-  line-height: 1.8;
-
+  color: var(--light-gray);
   font-size: 1rem;
+  font-weight: var(--fw-300);
+  line-height: 1.8;
 }
 
 
 .back-button {
-
   position: fixed;
-
   top: 24px;
   left: 24px;
 
   z-index: 1000;
 
-  text-decoration: none;
-
-  color: white;
-
-  background: rgba(30, 30, 30, 0.85);
-
-  backdrop-filter: blur(10px);
+  color: var(--light-gray);
+  background: var(--eerie-black-2);
 
   padding: 0.8rem 1.2rem;
 
+  border: 1px solid var(--jet);
   border-radius: 14px;
 
-  border: 1px solid rgba(255,255,255,0.08);
-
-  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+  box-shadow: var(--shadow-2);
 
   transition:
-    transform 0.2s ease,
-    background 0.2s ease;
+    color var(--transition-1),
+    transform var(--transition-1),
+    background var(--transition-1);
 }
 
 .back-button:hover {
-
-  background: rgba(45,45,45,0.95);
-
+  color: var(--orange-yellow-crayola);
+  background: var(--onyx);
   transform: translateY(-2px);
+}
+
+.gallery-title {
+  position: relative;
+  width: max-content;
+
+  color: var(--white-2);
+  font-size: 32px;
+  font-weight: var(--fw-600);
+
+  padding-bottom: 15px;
+  margin: 0 auto 3rem;
+}
+
+.gallery-title::after {
+  content: "";
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  width: 40px;
+  height: 5px;
+
+  background: var(--text-gradient-yellow);
+  border-radius: 3px;
 }
